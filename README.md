@@ -72,4 +72,3 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/app/buildin
 Feel free to reach out if you have any questions or suggestions!
 
 * Email: farbodfooladi@gmail.com
-* GitHub: github.com/farbodfld
