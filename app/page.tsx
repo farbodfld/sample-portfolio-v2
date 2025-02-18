@@ -194,7 +194,7 @@ export default function HomePage() {
             />
             <div className="p-4">
               <h3 className="text-xl font-bold dark:text-white">
-                ortfolio Web Application
+                Portfolio Web Application
               </h3>
               <p className="mt-2 text-gray-700 dark:text-gray-300">
                 This is a Next.js project bootstrapped with create-next-app.
