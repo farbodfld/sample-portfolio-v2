@@ -16,35 +16,41 @@ export default function AboutPage() {
         Hi, I’m Farbod Fooladi
       </h1>
       <p className="text-lg text-gray-700 dark:text-gray-300 text-center px-[476] mb-12 italic font-bold">
-        Passionate & Skilled Web Developer
+        Passionate & Skilled Developer
       </p>
 
       <div className="w-80 h-80 mb-12 rounded-full overflow-hidden shadow-md transition-transform duration-300 hover:scale-105">
-          <Image
-            src="/assets/profile.jpg"
-            alt="Profile Picture"
-            width={192}
-            height={192}
-            className="object-cover w-full h-full"
-          />
-        </div>
+        <Image
+          src="/assets/profile.jpg"
+          alt="Profile Picture"
+          width={192}
+          height={192}
+          className="object-cover w-full h-full"
+        />
+      </div>
 
       {/* Profile Picture and Bio */}
       <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
-        
         <div className="text-gray-700 dark:text-gray-300 max-w-prose">
           <p className="mb-4">
-            Hi! I’m Farbod Fooladi a passionate developer with experience in
-            building web applications using modern technologies.
+            Hi! I am Farbod Fooladi—a passionate developer with experience in
+            building web applications using modern technologies. I hold a
+            Bachelor degree in Computer Science and a Master degree in Data
+            Science, equipping me with a strong foundation in software
+            development and data-driven solutions.
           </p>
           <p className="mb-4">
-            I also have a strong background in software development across
+            I also have a diverse background in software development across
             various fields, including game development and machine learning,
             such as recommendation systems.
           </p>
-          <p>
+          <p className="mb-4">
             I enjoy crafting user-friendly, responsive websites that solve
-            real-world problems. When I’m not coding, you’ll find me exploring
+            real-world problems. When I am not coding, you will find me exploring
+            new technologies, reading, or working on personal projects.
+          </p>
+          <p>
+            When I am not coding, you will find me exploring
             new technologies, reading, or working on personal projects.
           </p>
         </div>
@@ -123,6 +129,15 @@ export default function AboutPage() {
           <div className="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium">
             AI
           </div>
+          <div className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-sm font-medium">
+            R
+          </div>
+          <div className="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium">
+            Node.js
+          </div>
+          <div className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium">
+            Express js
+          </div>
         </div>
       </div>
 
@@ -170,8 +185,7 @@ export default function AboutPage() {
       <div className="mt-8 text-center">
         <h2 className="text-2xl font-bold mb-12">Let’s Work Together</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-2">
-          I’m always open to new opportunities and collaborations. Feel free to
-          reach out!
+          I’m always open to new opportunities and collaborations.
         </p>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
           Feel free to reach out!
