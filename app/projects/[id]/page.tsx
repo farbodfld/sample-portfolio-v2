@@ -15,7 +15,7 @@ const projects: Project[] = [
   {
     title: "Portfolio Website",
     description:
-    "This is a Next.js project bootstrapped with create-next-app.This project serves as a personal portfolio website to showcase your projects, skills, and contact information.",
+      "This is a Next.js project bootstrapped with create-next-app.This project serves as a personal portfolio website to showcase your projects, skills, and contact information.",
     imageUrl: "/assets/project5.jpg",
     link: "https://example.com/project5",
   },
@@ -80,6 +80,8 @@ export default function ProjectPage() {
       <Image
         src={project.imageUrl}
         alt={project.title}
+        width={500}
+        height={400}
         className="w-full h-[35rem] object-contain mb-8"
       />
       <p className="text-lg mb-4">{project.description}</p>
