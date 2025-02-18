@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -227,7 +226,7 @@ export default function HomePage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-700 mb-6 dark:text-gray-300"
           >
-            I'm a passionate developer with experience in building modern web
+            I am a passionate developer with experience in building modern web
             applications using Next.js, TypeScript, and Tailwind CSS. I love
             solving real-world problems and crafting intuitive, user-friendly
             interfaces.
