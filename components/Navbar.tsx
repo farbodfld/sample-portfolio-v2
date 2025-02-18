@@ -36,7 +36,7 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation Links */}
-        <ul className="flex space-x-4 items-center">
+        <ul className="flex space-x-4 items-center px-7">
           <li>
             <Link
               href="/"

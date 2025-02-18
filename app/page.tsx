@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
-  // const { theme, setTheme } = useTheme(); // Access the theme and toggle function
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -75,13 +73,16 @@ export default function HomePage() {
             <Image
               src="/assets/project1.jpg"
               alt="Project 1"
+              width={500}
+              height={400}
               className="w-full h-96 object-cover"
             />
             <div className="p-4">
               <h3 className="text-xl font-bold dark:text-white">Hive Game</h3>
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                It simiulate the Hive board game which has two player. The
-                player which siege the queen pawn of second player is wiiner.
+                It simulates the Hive board game which has two players. The
+                player who sieges the queen pawn of the second player is the
+                winner.
               </p>
               <Link
                 href="https://github.com/farbodfld/Hive_Game"
@@ -102,6 +103,8 @@ export default function HomePage() {
             <Image
               src="/assets/project2.jpg"
               alt="Project 2"
+              width={500}
+              height={400}
               className="w-full h-96 object-cover"
             />
             <div className="p-4">
@@ -130,6 +133,8 @@ export default function HomePage() {
             <Image
               src="/assets/project3.jpg"
               alt="Project 3"
+              width={500}
+              height={400}
               className="w-full h-72 object-cover"
             />
             <div className="p-4">
@@ -137,9 +142,9 @@ export default function HomePage() {
                 Informed and Uninformed Search Algorithms
               </h3>
               <p className="mt-2 text-gray-700 dark:text-gray-300">
-                This program contains three method (A*, BFS, DFS) and also
+                This program contains three methods (A*, BFS, DFS) and also
                 pygame for finding the shortest path from start point to end
-                point by using these methodes.
+                point by using these methods.
               </p>
               <Link
                 href="https://github.com/farbodfld/Informed-and-Uninformed-Search"
@@ -160,6 +165,8 @@ export default function HomePage() {
             <Image
               src="/assets/project4.jpg"
               alt="Project 4"
+              width={500}
+              height={400}
               className="w-full h-96 object-cover"
             />
             <div className="p-4">
@@ -171,7 +178,7 @@ export default function HomePage() {
                 for coursera web-site.
               </p>
               <Link
-                href="/projects/ecommerce"
+                href="https://github.com/farbodfld/Coursera-Recommender-System"
                 className="mt-4 inline-block text-blue-600 hover:underline dark:text-blue-400"
                 target="_blank"
               >
@@ -189,7 +196,9 @@ export default function HomePage() {
           >
             <Image
               src="/assets/project5.jpg"
-              alt="Project 2"
+              alt="Project 5"
+              width={500}
+              height={400}
               className="w-full h-96 object-cover"
             />
             <div className="p-4">
@@ -202,7 +211,7 @@ export default function HomePage() {
                 your projects, skills, and contact information.
               </p>
               <Link
-                href="/projects/task-management"
+                href="https://github.com/farbodfld/sample-portfolio-v2"
                 className="mt-4 inline-block text-blue-600 hover:underline dark:text-blue-400"
                 target="_blank"
               >
