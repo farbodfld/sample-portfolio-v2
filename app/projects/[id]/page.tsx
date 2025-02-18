@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -12,46 +13,46 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "Portfolio Website",
     description:
-      "A full-stack e-commerce platform built with Next.js, TypeScript, and Stripe for payments.",
+    "This is a Next.js project bootstrapped with create-next-app.This project serves as a personal portfolio website to showcase your projects, skills, and contact information.",
+    imageUrl: "/assets/project5.jpg",
+    link: "https://example.com/project5",
+  },
+  {
+    title: "Coursera Recommender System",
+    description:
+      "At this project we implemented a course-recommendation system for coursera web-site. It uses collaborative filtering to recommend courses to users.",
+    imageUrl: "/assets/project4.jpg",
+    link: "https://example.com/project4",
+  },
+  {
+    title: "Informed and Uninformed Search Algorithms",
+    description:
+      "This program contains three method (A*, BFS, DFS) and also pygame for finding the shortest path from start point to end point by using these methodes.",
+    imageUrl: "/assets/project3.jpg",
+    link: "https://example.com/project3",
+  },
+  {
+    title: "Hive Game",
+    description:
+      "It simiulate the Hive board game which has two player. The player which siege the queen pawn of second player is wiiner.",
     imageUrl: "/assets/project1.jpg",
     link: "https://example.com/project1",
   },
   {
-    title: "Task Management App",
+    title: "Kill or Die - UnityProject",
     description:
-      "A task management app with drag-and-drop functionality using React and Firebase.",
+      "A personal blog website with Markdown support and SEO optimization.",
     imageUrl: "/assets/project2.jpg",
     link: "https://example.com/project2",
   },
   {
-    title: "Personal Blog",
+    title: "Java Projects",
     description:
-      "A personal blog website with Markdown support and SEO optimization.",
-    imageUrl: "/assets/project3.jpg",
-    link: "https://example.com/project3",
-  },
-  {
-    title: "Personal Blog",
-    description:
-      "A personal blog website with Markdown support and SEO optimization.",
-    imageUrl: "/assets/project1.jpg",
-    link: "https://example.com/project3",
-  },
-  {
-    title: "Personal Blog",
-    description:
-      "A personal blog website with Markdown support and SEO optimization.",
-    imageUrl: "/assets/project3.jpg",
-    link: "https://example.com/project3",
-  },
-  {
-    title: "Personal Blog",
-    description:
-      "A personal blog website with Markdown support and SEO optimization.",
-    imageUrl: "/assets/project2.jpg",
-    link: "https://example.com/project3",
+      "You can find all of my Java projects in this repository. For more informtion visit my github page.",
+    imageUrl: "/assets/project6.jpg",
+    link: "https://example.com/project6",
   },
 ];
 
@@ -74,9 +75,9 @@ export default function ProjectPage() {
   }
 
   return (
-    <div className="p-8 pt-24">
+    <div className="min-h-screen pt-24 p-8 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50 transition-colors duration-300">
       <h1 className="text-3xl font-bold mb-8">{project.title}</h1>
-      <img
+      <Image
         src={project.imageUrl}
         alt={project.title}
         className="w-full h-[35rem] object-contain mb-8"

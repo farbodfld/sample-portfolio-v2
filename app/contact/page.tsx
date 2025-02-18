@@ -31,7 +31,7 @@ export default function ContactPage() {
       <h1 className="text-3xl font-bold mb-8 text-center">Contact Me</h1>
       {submitted ? (
         <p className="text-green-600 text-center">
-          Thank you for your message! I'll get back to you soon.
+          Thank you for your message! I will get back to you soon.
         </p>
       ) : (
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">

@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PageTransition from "../components/PageTransition";
 import { ThemeProvider } from "next-themes";
-import Head from "next/head";
 import { metadata } from "../app/metadata"; // Import metadata
 
 export default function RootLayout({

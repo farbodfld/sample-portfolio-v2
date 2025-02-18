@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -19,7 +20,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 p-4 bg-white shadow-md dark:bg-gray-800 transition-colors duration-300 rounded-b-[40px]">
       <div className="container mx-auto flex justify-between items-center">
         {/* Profile Picture and Text */}
-        <a href="/" className="flex items-center space-x-4">
+        <Link href="/" className="flex items-center space-x-4">
           <div className="w-12 h-12 rounded-full overflow-hidden shadow-md transition-transform duration-300 hover:scale-110">
             <Image
               src="/assets/profile.jpg" // Path to your profile picture
@@ -30,19 +31,19 @@ export default function Navbar() {
             />
           </div>
           <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-            My Portfolio
+            Farbod Fooladi
           </h1>
-        </a>
+        </Link>
 
         {/* Navigation Links */}
         <ul className="flex space-x-4 items-center">
           <li>
-            <a
+            <Link
               href="/"
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <a
@@ -53,12 +54,12 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a
+            <Link
               href="/projects"
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
             >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
             <a
