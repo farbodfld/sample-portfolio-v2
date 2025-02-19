@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  env: {
+    FORMSPREE_URL: process.env.FORMSPREE_URL,
+  }
 };
 
 export default nextConfig;

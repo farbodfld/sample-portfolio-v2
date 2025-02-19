@@ -1,6 +1,9 @@
 "use client"; // Required for client-side interactivity
 
 import { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -13,16 +16,38 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const response = await fetch("https://formspree.io/f/your-form-id", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const formspree_url = process.env.FORMSPREE_URL;
 
-    if (response.ok) {
-      setSubmitted(true);
+    try {
+      const response = await axios.post(formspree_url as string, formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      // Check if the submission was successful
+      if (response.status === 200) {
+        toast.success(
+          "Thank you for your message! I will get back to you soon."
+        );
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+
+      } else {
+        console.error("Error submitting form to Formspree:", response.data);
+        toast.error("Failed to submit the form. Please try again later.");
+      }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.error("Error submitting form to Formspree:", error.message);
+      } else {
+        console.error("Unexpected error:", error);
+      }
+      toast.error("Failed to submit the form. Please try again later.");
     }
   };
 
@@ -97,6 +122,7 @@ export default function ContactPage() {
           </button>
         </form>
       )}
+      <ToastContainer />
     </div>
   );
 }
