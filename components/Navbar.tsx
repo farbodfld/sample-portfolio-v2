@@ -6,8 +6,15 @@ import { useEffect, useState } from "react";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import type { Profile, SiteSettings } from "@/lib/types";
 
-export default function Navbar() {
+export default function Navbar({ 
+  profile,
+  settings
+}: { 
+  profile?: Profile | null,
+  settings?: SiteSettings | null
+}) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -23,17 +30,16 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         {/* Profile Picture and Text */}
         <Link href="/" className="flex items-center space-x-4">
-          <div className="w-12 h-12 rounded-full overflow-hidden shadow-md transition-transform duration-300 hover:scale-110">
+          <div className="w-12 h-12 rounded-full overflow-hidden shadow-md transition-transform duration-300 hover:scale-110 border-2 border-blue-600/20 relative">
             <Image
-              src="/assets/profile.jpg" // Path to your profile picture
-              alt="Profile Picture"
-              width={48} // Width in pixels
-              height={48} // Height in pixels
-              className="object-cover w-full h-full"
+              src={profile?.image_url && profile.image_url.trim() !== "" ? profile.image_url : "/assets/profile.jpg"}
+              alt={profile?.full_name || "Profile Picture"}
+              fill
+              className="object-cover"
             />
           </div>
           <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-            Farbod Fooladi
+            {profile?.full_name || "Farbod Fooladi"}
           </h1>
         </Link>
 
@@ -85,6 +91,18 @@ export default function Navbar() {
               Contact
             </Link>
           </li>
+          {settings?.resume_url && (
+            <li>
+              <a
+                href={settings.resume_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                Resume
+              </a>
+            </li>
+          )}
           <li>
             <button
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
